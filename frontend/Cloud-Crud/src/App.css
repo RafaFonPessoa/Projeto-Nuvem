@@ -1,0 +1,206 @@
+/* src/styles.css */
+/* Estilos globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Formulário de adição */
+.form-produto {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.form-produto h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+/* Lista de produtos */
+.lista-produtos {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.produto {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.produto:hover {
+  transform: translateY(-3px);
+}
+
+.produto h2 {
+  color: #2d3748;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.produto p {
+  color: #718096;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.detalhes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #edf2f7;
+  font-size: 0.9rem;
+}
+
+.detalhes span:first-child {
+  color: #48bb78;
+}
+
+.detalhes span:last-child {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+/* Botões */
+.acoes {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button.editar {
+  background-color: #48bb78;
+  color: white;
+}
+
+button.editar:hover {
+  background-color: #38a169;
+}
+
+button.excluir {
+  background-color: #f56565;
+  color: white;
+}
+
+button.excluir:hover {
+  background-color: #e53e3e;
+}
+
+button.adicionar {
+  background-color: #4299e1;
+  color: white;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+button.adicionar:hover {
+  background-color: #3182ce;
+}
+
+/* Estados e feedback */
+.status {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.sem-produtos {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  color: #718096;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .form-produto {
+    padding: 1.5rem;
+  }
+
+  .lista-produtos {
+    grid-template-columns: 1fr;
+  }
+}
