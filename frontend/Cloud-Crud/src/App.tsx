@@ -18,7 +18,7 @@ export default function App() {
 
   const buscarProdutos = async () => {
     try {
-      const resposta = await fetch('http://127.0.0.1:8000/produtos');
+      const resposta = await fetch('http://54.146.151.102:8000/produtos');
       
       if (!resposta.ok) {
         throw new Error('Erro ao carregar produtos');
@@ -43,7 +43,7 @@ export default function App() {
       const confirmacao = window.confirm('Tem certeza que deseja excluir este produto?');
       if (!confirmacao) return;
 
-      const resposta = await fetch(`http://127.0.0.1:8000/produtos/${id}`, {
+      const resposta = await fetch(`http://54.146.151.102:8000/produtos/${id}`, {
         method: 'DELETE'
       });
 
@@ -65,7 +65,7 @@ export default function App() {
     if (!novoNome || !novaDescricao || !novoPreco || !novaQuantidade) return;
 
     try {
-      const resposta = await fetch(`http://127.0.0.1:8000/produtos/${produto.id}`, {
+      const resposta = await fetch(`http://54.146.151.102:8000/produtos/${produto.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

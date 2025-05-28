@@ -17,7 +17,7 @@ const AddProductForm = ({ onSuccess }: AddProductFormProps) => {
     e.preventDefault();
     
     try {
-      const resposta = await fetch('http://127.0.0.1:8000/produtos/cadastrar', {
+      const resposta = await fetch('http://54.146.151.102:8000/produtos/cadastrar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
